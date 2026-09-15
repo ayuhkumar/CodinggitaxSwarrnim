@@ -103,8 +103,8 @@
 | 10:30–11:30 | HTML (Sumit Sir)         | 10:30–11:30 | Maths              |
 | 11:30–1:00  |Figma (Prabhat Sir)     | 11:30–1:00  |  HTML (Sumit Sir)       |
 | 1:00–2:00   | Break               | 1:00–2:00  | Break              |
-| 2:00–3:00  | Javascript (Nikhil Sir) | 2:00–3:00   | Industry Readiness      |
-| 3:00–4:00   | Industry Readiness      | 3:00–4:00   | Javascript (Nikhil Sir) |
+| 2:00–3:00  | Javascript (Nikhil Sir) | 2:00–3:00   | Python(Sumit sir)      |
+| 3:00–4:00   | Python(Sumit sir)      | 3:00–4:00   | Javascript (Nikhil Sir) |
 | 4:00–4:15   | Break             | 4:00–4:15   | Break              |
 | 4:15–6:30   | Industry Readiness      | 4:15–6:00   | Industry Readiness      |
 
