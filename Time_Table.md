@@ -1,4 +1,4 @@
-## 18 September (Saturday) (Swarrnim)
+## 19 September (Saturday) (Swarrnim)
 
 | Time        | CG LAB 1                        
 | ----------- | ---------------------
@@ -7,7 +7,7 @@
 | 1:00–2:00  | Break                 | 
 | 2:00–4:00   | HTML(Sumit Sir)      |
 
-## 17 September (Friday) (Swarrnim)
+## 18 September (Friday) (Swarrnim)
 
 | Time        | CG LAB 1                        
 | ----------- | ---------------------
@@ -18,7 +18,7 @@
 | 4:00–4:30   | Break    |
 | 4:30–6:00   | Industry Readiness    |
 
-## 16 September (Thursday) (Swarrnim)
+## 17 September (Thursday) (Swarrnim)
 
 | Time        | CG LAB 1                        
 | ----------- | ---------------------
@@ -30,7 +30,7 @@
 | 4:30–6:00   | Industry Readiness    | 
 
 
-## 15 September (Wednesday) (Swarrnim)
+## 16 September (Wednesday) (Swarrnim)
 
 | Time        | CG LAB 1                        
 | ----------- | ---------------------
@@ -44,7 +44,7 @@
 
 
 
-## 14 September (Tuesday) (Swarrnim)
+## 15 September (Tuesday) (Swarrnim)
 
 | Time        | CG LAB 1                        
 | ----------- | ---------------------
@@ -56,7 +56,7 @@
 | 4:30–6:00   | Industry Readiness    | 
 
 
-## 18 September (Saturday) (SU)
+## 19 September (Saturday) (SU)
 
 | Time        | CG LAB 3              | Time        | CG LAB 4             |
 | ----------- | --------------------- | ----------- | --------------------- |
@@ -67,7 +67,7 @@
 | 3:00–4:00   | Figma(Prabhat sir)     | 3:00–4:00   | Javascript (Nikhil Sir)       |
 
 
-## 17 September (Friday) (SU)
+## 18 September (Friday) (SU)
 
 | Time        | CG LAB 3              | Time        | CG LAB 4             |
 | ----------- | --------------------- | ----------- | --------------------- |
@@ -80,7 +80,7 @@
 | 4:15–6:30   | Industry Readiness  | 4:15–6:00   | Industry Readiness  |
 
 
-## 16 September (Thursday) (SU)
+## 17 September (Thursday) (SU)
 
 | Time        | CG LAB 3              | Time        | CG LAB 4             |
 | ----------- | --------------------- | ----------- | --------------------- |
@@ -93,7 +93,7 @@
 | 4:15–6:30   | Industry Readiness  | 4:15–6:00   | Industry Readiness  |
 
 
-## 15 Septembner (Wednesday) (SU)
+## 16 Septembner (Wednesday) (SU)
 
 | Time        | CG LAB 3              | Time        | CG LAB 4             |
 | ----------- | --------------------- | ----------- | --------------------- |
@@ -106,7 +106,7 @@
 | 4:15–6:30   | Industry Readiness  | 4:15–6:00   | Industry Readiness  |
 
 
-## 14 September (Tuesday) (SU)
+## 15 September (Tuesday) (SU)
 
 | Time        | CG LAB 3              | Time        | CG LAB 4             |
 | ----------- | --------------------- | ----------- | --------------------- |
