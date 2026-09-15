@@ -82,28 +82,31 @@
 
 ## 17 September (Thursday) (SU)
 
-| Time        | CG LAB 3              | Time        | CG LAB 4             |
-| ----------- | --------------------- | ----------- | --------------------- |
-| 09:30–11:15  | HTML (Sumit Sir)      | 09:30–11:15  | Figma (Prabhat Sir)   |
-| 11:15–1:00 | Figma (Prabhat Sir)       | 11:15–1:00 | HTML (Sumit Sir)      |
-| 1:00–2:00  | Break                 | 1:00–2:00  | Break                 |
-| 2:00–3:00   | Javascript (Nikhil Sir)      | 2:00–3:00   | English    |
-| 3:00–4:00   | English      | 3:00–4:00   | Javascript (Nikhil Sir)       |
-| 4:00–4:15   | Break                 | 4:00–4:15   | Break                 |
-| 4:15–6:30   | Industry Readiness  | 4:15–6:00   | Industry Readiness  |
+| Time            | CG LAB 3                | Time            | CG LAB 4                |
+| --------------- | ----------------------- | --------------- | ----------------------- |
+| 09:30–10:30| Maths              | 09:30–10:30 | HTML (Sumit Sir) |
+| 10:30–11:30 |  Figma (Prabhat Sir)        | 10:30–11:30 | Maths              |
+| 11:30–1:00  |HTML (Sumit Sir)     | 11:30–1:00  |  Figma (Prabhat Sir)       |
+| 1:00–2:00   | Break               | 1:00–2:00  | Break              |
+| 2:00–3:00  | Javascript (Nikhil Sir) | 2:00–3:00   | English      |
+| 3:00–4:00   | English      | 3:00–4:00   | Javascript (Nikhil Sir) |
+| 4:00–4:15   | Break             | 4:00–4:15   | Break              |
+| 4:15–6:30   | Industry Readiness      | 4:15–6:00   | Industry Readiness      |
+
 
 
 ## 16 Septembner (Wednesday) (SU)
 
-| Time        | CG LAB 3              | Time        | CG LAB 4             |
-| ----------- | --------------------- | ----------- | --------------------- |
-| 09:30–11:15  | HTML (Sumit Sir)      | 09:30–11:15  |  Figma(Prabhat sir)   |
-| 11:15–1:00 |  Figma(Prabhat sir)       | 11:15–1:00 | HTML (Divyam Sir)      |
-| 1:00–2:00  | Break                 | 1:00–2:00  | Break                 |
-| 2:00–3:00   | Javascript (Nikhil Sir)      | 2:00–3:00   | Python(Sumit sir)     |
-| 3:00–4:00   | Python(Sumit sir)     | 3:00–4:00   | Javascript (Nikhil Sir)       |
-| 4:00–4:15   | Break                 | 4:00–4:15   | Break                 |
-| 4:15–6:30   | Industry Readiness  | 4:15–6:00   | Industry Readiness  |
+| Time            | CG LAB 3                | Time            | CG LAB 4                |
+| --------------- | ----------------------- | --------------- | ----------------------- |
+| 09:30–10:30| Maths              | 09:30–10:30 | Figma (Prabhat Sir) |
+| 10:30–11:30 | HTML (Sumit Sir)         | 10:30–11:30 | Maths              |
+| 11:30–1:00  |Figma (Prabhat Sir)     | 11:30–1:00  |  HTML (Sumit Sir)       |
+| 1:00–2:00   | Break               | 1:00–2:00  | Break              |
+| 2:00–3:00  | Javascript (Nikhil Sir) | 2:00–3:00   | Industry Readiness      |
+| 3:00–4:00   | Industry Readiness      | 3:00–4:00   | Javascript (Nikhil Sir) |
+| 4:00–4:15   | Break             | 4:00–4:15   | Break              |
+| 4:15–6:30   | Industry Readiness      | 4:15–6:00   | Industry Readiness      |
 
 
 ## 15 September (Tuesday) (SU)
