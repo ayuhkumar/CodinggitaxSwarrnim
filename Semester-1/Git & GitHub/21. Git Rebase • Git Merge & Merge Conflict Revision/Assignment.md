@@ -113,7 +113,8 @@ Explain which commit was skipped.
 git log --oneline --graph --all
 ```
 
-** Submission ** : GitHub Repo link + Screenshots + photos of written answers 
+** Submission ** : GitHub Repo link + Screenshots + Photos of written answers.
+
 ---
 
 ### Deadline: 20th Sept, 2026.
