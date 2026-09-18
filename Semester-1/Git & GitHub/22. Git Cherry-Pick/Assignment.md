@@ -243,7 +243,7 @@ git log --oneline --graph --all
 
 ---
 
-# Q6. Short Practical Questions
+# Q6. Short Practical + Theoretical Questions 
 
 Perform the following commands and explain what each one does:
 
@@ -317,7 +317,9 @@ Before submitting, make sure you have:
   ```bash
   git log --oneline --graph --all
   ```
-**Submission Guidelines:** Given in the instructions.
+
+---
+> **Submission Guidelines:** Given in the instructions.
 ---
 
 # Quick Revision
