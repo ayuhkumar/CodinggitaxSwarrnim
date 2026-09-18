@@ -9,7 +9,7 @@
 * Use `git log --oneline --graph --all` to show your commit history.
 * Take screenshots of important steps if required.
 * Write the answers of the theoretical questions in your notebook and submit the photos in your CodingGita_assignment repository.
-* Take the screenshots of commit history of all branches and submit the screenshots + GitHub Repo link in your CodingGita_assignment repository.
+* Take the screenshots of commit history of all branches and submit the screenshots + GitHub Repo link for all practical questions in your CodingGita_assignment repository.
 
 ---
 
