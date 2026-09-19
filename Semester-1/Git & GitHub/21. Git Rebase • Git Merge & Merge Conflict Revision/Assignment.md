@@ -1,6 +1,4 @@
-Absolutely. For the practical questions, instead of giving students the branch/commit diagram directly, we can ask them to **create their own scenario** with meaningful branch and commit names.
 
-Here is a revised assignment with more realistic scenarios.
 
 # Assignment: Git Rebase, Git Merge & Merge Conflict
 
