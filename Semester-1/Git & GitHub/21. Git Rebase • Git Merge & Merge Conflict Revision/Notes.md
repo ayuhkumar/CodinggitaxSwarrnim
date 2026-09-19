@@ -1,12 +1,12 @@
 # Git Rebase • Git Merge & Merge Conflict Revision
+---
+# 1. Git Merge
 
-## 1. Git Merge
-
-### Definition
+## Definition
 
 **Git Merge** is used to **combine the changes of one branch into another branch**.
 
-### Explanation
+## Explanation
 
 Suppose we have a `main` branch and a `feature` branch:
 
@@ -33,7 +33,7 @@ A---B---C---M  main
 
 Here, `M` is a **merge commit**.
 
-### Important Point
+## Important Point
 
 > You must switch to the branch **into which** you want to merge.
 
@@ -42,9 +42,11 @@ git switch main
 git merge feature
 ```
 
-Means: **Merge `feature` into `main`.**
+Means:
 
-### Advantages of Merge
+> **Merge `feature` into `main`.**
+
+## Advantages of Merge
 
 * Preserves the existing commit history.
 * Does not rewrite existing commits.
@@ -55,11 +57,11 @@ Means: **Merge `feature` into `main`.**
 
 # 2. Merge Conflict
 
-### Definition
+## Definition
 
 A **merge conflict** occurs when Git cannot automatically combine changes from two branches.
 
-### When does it happen?
+## When Does It Happen?
 
 Usually when two branches modify the **same line or same part of a file differently**.
 
@@ -73,9 +75,9 @@ feature:
 Hello Developer
 ```
 
-Git cannot decide which version should remain.
+Git cannot automatically decide which version should remain.
 
-### Conflict Representation
+## Conflict Representation
 
 Git may show:
 
@@ -89,13 +91,15 @@ Hello Developer
 
 You must manually decide the final content.
 
-### How to Resolve a Merge Conflict
+## How to Resolve a Merge Conflict
+
+Start the merge:
 
 ```bash
 git merge feature
 ```
 
-If conflict occurs:
+If a conflict occurs:
 
 ```bash
 git status
@@ -118,7 +122,7 @@ git add .
 git commit
 ```
 
-### Conflict Flow
+## Conflict Flow
 
 ```text
 git merge
@@ -144,13 +148,13 @@ For a merge conflict:
 
 # 3. Git Rebase
 
-### Definition
+## Definition
 
 **Git Rebase** is used to **move/replay the commits of one branch on top of another branch**.
 
-It is mainly used to keep the Git history **clean and linear**.
+It is mainly used to keep Git history **clean and linear**.
 
-### Example
+## Example
 
 Before rebase:
 
@@ -175,7 +179,7 @@ A---B---C---D'---E'  feature
 
 `D'` and `E'` are newly created commits because Git replayed the original commits on the new base.
 
-### Important Point
+## Important Point
 
 > **Rebase rewrites history.**
 
@@ -205,7 +209,7 @@ You can bring the latest changes from `main` into your feature branch.
 
 A developer can update their feature branch with the latest `main` changes before the feature is merged.
 
-### Important Warning
+## Important Warning
 
 Because rebase rewrites history:
 
@@ -226,9 +230,9 @@ Because rebase rewrites history:
 | Main purpose    | Combine branches            | Keep history clean/linear       |
 | Easy memory     | **Join**                    | **Replay**                      |
 
-### Visual Difference
+## Visual Difference
 
-**Merge:**
+### Merge
 
 ```text
       D---E
@@ -236,13 +240,13 @@ Because rebase rewrites history:
 A---B---C---M
 ```
 
-**Rebase:**
+### Rebase
 
 ```text
 A---B---C---D'---E'
 ```
 
-### Easy Way to Remember
+## Easy Way to Remember
 
 > **Merge = Join the histories**
 
@@ -285,7 +289,7 @@ A---B---E---F---C'---D'
 
 Now your feature commits are based on the latest `main`.
 
-### Real-Life Benefits
+## Real-Life Benefits
 
 Rebase is useful when:
 
@@ -297,7 +301,230 @@ Rebase is useful when:
 
 ---
 
-# 7. Git Rebase Conflict
+# 7. `git fetch origin`
+
+## Definition
+
+```bash
+git fetch origin
+```
+
+`git fetch` downloads the latest information and commits from the remote repository.
+
+It updates remote-tracking branches such as:
+
+```text
+origin/main
+origin/feature-login
+```
+
+### Important
+
+`git fetch` **does not change your current branch's files**.
+
+It only gets the latest information from the remote repository.
+
+## Example
+
+Suppose GitHub has:
+
+```text
+A---B---C---D  origin/main
+     \
+      E---F    feature-login
+```
+
+Your local repository currently knows:
+
+```text
+A---B---C
+     \
+      E---F    feature-login
+```
+
+Run:
+
+```bash
+git fetch origin
+```
+
+Now your local repository knows about the latest remote `main`:
+
+```text
+A---B---C---D  origin/main
+     \
+      E---F    feature-login
+```
+
+Your `feature-login` branch itself has **not changed yet**.
+
+---
+
+# 8. What Does `origin/main` Mean?
+
+```text
+origin
+   ↓
+Remote repository name
+
+main
+   ↓
+Branch name
+```
+
+Therefore:
+
+```text
+origin/main
+```
+
+means:
+
+> The `main` branch of the remote repository named `origin`.
+
+Usually:
+
+```text
+origin = GitHub remote repository
+```
+
+So:
+
+```bash
+git rebase origin/main
+```
+
+means:
+
+> Replay my current branch's commits on top of the remote `main` branch.
+
+---
+
+# 9. `git fetch origin` + `git rebase origin/main`
+
+These commands are commonly used together to update a feature branch with the **latest remote `main`**.
+
+```bash
+git fetch origin
+git rebase origin/main
+```
+
+---
+
+# 10. Real-Life Scenario — Updating a Feature Branch
+
+Imagine you are working on a login feature.
+
+Your branch is:
+
+```text
+feature-login
+```
+
+Initially:
+
+```text
+A---B  main
+     \
+      C---D  feature-login
+```
+
+While you are working, another developer pushes new changes to GitHub's `main`:
+
+```text
+A---B---E---F  origin/main
+     \
+      C---D    feature-login
+```
+
+You want to update your feature branch.
+
+## Step 1 — Switch to Your Feature Branch
+
+```bash
+git switch feature-login
+```
+
+## Step 2 — Get Latest Remote Information
+
+```bash
+git fetch origin
+```
+
+Now:
+
+```text
+A---B---E---F  origin/main
+     \
+      C---D    feature-login
+```
+
+## Step 3 — Rebase Onto Latest Remote Main
+
+```bash
+git rebase origin/main
+```
+
+Git replays `C` and `D` on top of `F`.
+
+Result:
+
+```text
+A---B---E---F---C'---D'  feature-login
+             |
+          origin/main
+```
+
+### What Happened?
+
+The original:
+
+```text
+C---D
+```
+
+was replayed as:
+
+```text
+C'---D'
+```
+
+Your feature branch is now based on the latest remote `main`.
+
+---
+
+# 11. Why Use `fetch` Before Rebase?
+
+Instead of rebasing on an old local `main`:
+
+```bash
+git rebase main
+```
+
+you can first get the latest remote changes:
+
+```bash
+git fetch origin
+git rebase origin/main
+```
+
+This allows you to rebase onto the **latest fetched remote `main`**.
+
+### Easy Memory
+
+```text
+git fetch origin
+       ↓
+Get latest remote information
+       ↓
+git rebase origin/main
+       ↓
+Replay feature commits on latest remote main
+```
+
+---
+
+# 12. Git Rebase Conflict
 
 Rebase can also create conflicts.
 
@@ -305,7 +532,7 @@ Suppose:
 
 ```bash
 git switch feature
-git rebase main
+git rebase origin/main
 ```
 
 Git tries to replay your commits but finds conflicting changes.
@@ -316,23 +543,23 @@ You may see:
 CONFLICT
 ```
 
-### Step 1: Check the conflict
+## Step 1: Check the Conflict
 
 ```bash
 git status
 ```
 
-### Step 2: Fix the conflicted files
+## Step 2: Fix the Conflicted Files
 
-Remove conflict markers and keep the correct content.
+Remove the conflict markers and keep the correct content.
 
-### Step 3: Stage the resolved files
+## Step 3: Stage the Resolved Files
 
 ```bash
 git add .
 ```
 
-### Step 4: Continue the rebase
+## Step 4: Continue the Rebase
 
 ```bash
 git rebase --continue
@@ -340,25 +567,31 @@ git rebase --continue
 
 If another conflict occurs, repeat the process.
 
+## Conflict Flow
+
 ```text
+git rebase
+    ↓
 Conflict
-   ↓
+    ↓
+git status
+    ↓
 Fix files
-   ↓
+    ↓
 git add .
-   ↓
+    ↓
 git rebase --continue
-   ↓
+    ↓
 Another conflict?
-   ↓
+    ↓
 Repeat
 ```
 
 ---
 
-# 8. `git rebase --continue`
+# 13. `git rebase --continue`
 
-### Definition
+## Definition
 
 `--continue` tells Git:
 
@@ -367,9 +600,40 @@ Repeat
 Command:
 
 ```bash
-git add .
 git rebase --continue
 ```
+
+### Simple Example
+
+Suppose:
+
+```bash
+git rebase origin/main
+```
+
+causes a conflict.
+
+First:
+
+```bash
+git status
+```
+
+Fix the conflicted file.
+
+Then:
+
+```bash
+git add Student.txt
+```
+
+Finally:
+
+```bash
+git rebase --continue
+```
+
+Git continues replaying the remaining commits.
 
 ### Remember
 
@@ -379,9 +643,9 @@ git rebase --continue
 
 ---
 
-# 9. `git rebase --abort`
+# 14. `git rebase --abort`
 
-### Definition
+## Definition
 
 `--abort` cancels the current rebase and returns the branch to the state it was in before the rebase started.
 
@@ -391,11 +655,47 @@ Command:
 git rebase --abort
 ```
 
-Use it when:
+## Simple Example
 
-* The rebase became too complicated.
-* You do not want to continue.
-* You want to start the rebase again later.
+Suppose you start:
+
+```bash
+git rebase origin/main
+```
+
+and several conflicts occur.
+
+You decide that you do not want to continue.
+
+Run:
+
+```bash
+git rebase --abort
+```
+
+Your branch returns to its previous state.
+
+Before rebase:
+
+```text
+A---B---C  main
+     \
+      D---E  feature
+```
+
+After:
+
+```bash
+git rebase --abort
+```
+
+The feature branch returns to:
+
+```text
+A---B---C  main
+     \
+      D---E  feature
+```
 
 ### Remember
 
@@ -405,9 +705,9 @@ Use it when:
 
 ---
 
-# 10. `git rebase --skip`
+# 15. `git rebase --skip`
 
-### Definition
+## Definition
 
 `--skip` tells Git to **skip the current commit being replayed** and continue with the next commit.
 
@@ -417,7 +717,43 @@ Command:
 git rebase --skip
 ```
 
-Use it only when you are sure that the current commit is unnecessary or its changes are already present elsewhere.
+## Simple Example
+
+Suppose your feature branch has:
+
+```text
+A---B---C---D  main
+     \
+      E---F---G  feature
+```
+
+During rebase, Git is currently replaying commit `F`.
+
+You discover that the changes from `F` are **already present in `main`**.
+
+You don't need to replay `F`.
+
+Run:
+
+```bash
+git rebase --skip
+```
+
+Git skips `F` and continues with `G`.
+
+```text
+E
+↓
+F  ← Current commit
+↓
+git rebase --skip
+↓
+G  ← Continue with next commit
+```
+
+### Important
+
+Use `--skip` only when you are sure that the current commit is unnecessary or its changes are already present.
 
 ### Remember
 
@@ -427,13 +763,13 @@ Use it only when you are sure that the current commit is unnecessary or its chan
 
 ---
 
-# 11. Rebase Conflict — Quick Revision
+# 16. `--continue` vs `--abort` vs `--skip`
 
-| Command                 | Purpose                             |
-| ----------------------- | ----------------------------------- |
-| `git rebase --continue` | Continue after resolving a conflict |
-| `git rebase --abort`    | Cancel the entire rebase            |
-| `git rebase --skip`     | Skip the current commit             |
+| Command                 | Simple Meaning | When to Use                            |
+| ----------------------- | -------------- | -------------------------------------- |
+| `git rebase --continue` | Continue       | After resolving a conflict             |
+| `git rebase --abort`    | Cancel         | When you want to stop the rebase       |
+| `git rebase --skip`     | Skip           | When the current commit is unnecessary |
 
 ### Easy Memory Trick
 
@@ -445,7 +781,221 @@ SKIP     → Ignore current commit
 
 ---
 
-# 12. Final Quick Revision
+# 17. What Happens After a Successful Rebase?
+
+After a successful rebase, your feature branch may contain **new commit IDs**.
+
+Before rebase:
+
+```text
+A---B---C---D  main
+     \
+      E---F    feature-login
+```
+
+After rebase:
+
+```text
+A---B---C---D---E'---F'  feature-login
+```
+
+Because `E` and `F` were replayed, they became:
+
+```text
+E'---F'
+```
+
+with new commit IDs.
+
+## If the Branch Was Already Pushed
+
+If `feature-login` was already pushed to GitHub before the rebase, a normal push may be rejected because the remote branch still has the old history.
+
+You may need:
+
+```bash
+git push --force-with-lease origin feature-login
+```
+
+---
+
+# 18. `git push --force-with-lease`
+
+Command:
+
+```bash
+git push --force-with-lease origin <branch_name>
+```
+
+Example:
+
+```bash
+git push --force-with-lease origin feature-login
+```
+
+### One-Line Description
+
+> **`--force-with-lease` safely force-pushes rewritten history while checking that the remote branch has not unexpectedly changed.**
+
+Use it when a previously pushed feature branch has been rebased and needs to be updated on the remote.
+
+---
+
+# 19. Complete Rebase Workflow
+
+A common real-world workflow is:
+
+```bash
+# 1. Switch to your feature branch
+git switch feature-login
+
+# 2. Get the latest remote information
+git fetch origin
+
+# 3. Rebase onto the latest remote main
+git rebase origin/main
+
+# 4. If there is a conflict:
+# Fix the files
+
+git add .
+
+# 5. Continue the rebase
+git rebase --continue
+
+# 6. After successful rebase
+git push --force-with-lease origin feature-login
+```
+
+## Workflow
+
+```text
+git switch feature-login
+          ↓
+git fetch origin
+          ↓
+git rebase origin/main
+          ↓
+     Conflict?
+      /     \
+    Yes      No
+     ↓        ↓
+ Fix files   Rebase
+     ↓       successful
+ git add .      ↓
+     ↓       Push branch
+git rebase      ↓
+--continue   --force-with-lease
+```
+
+---
+
+# 20. Complete Real-Life Example
+
+Imagine you are developing a **Login System**.
+
+Your branch:
+
+```text
+feature-login
+```
+
+Your teammate has updated `main` on GitHub.
+
+## Step 1 — Switch to Feature Branch
+
+```bash
+git switch feature-login
+```
+
+## Step 2 — Get Latest Remote Information
+
+```bash
+git fetch origin
+```
+
+## Step 3 — Rebase Onto Latest Remote Main
+
+```bash
+git rebase origin/main
+```
+
+## Step 4 — If There Is a Conflict
+
+Check:
+
+```bash
+git status
+```
+
+Fix the files.
+
+Then:
+
+```bash
+git add .
+git rebase --continue
+```
+
+If another conflict occurs, repeat the same process.
+
+## Step 5 — If You Want to Cancel
+
+```bash
+git rebase --abort
+```
+
+## Step 6 — If a Commit Is Unnecessary
+
+```bash
+git rebase --skip
+```
+
+## Step 7 — After Successful Rebase
+
+If the branch was already pushed:
+
+```bash
+git push --force-with-lease origin feature-login
+```
+
+---
+
+# 21. Complete Rebase Flow
+
+```text
+                  Start
+                    ↓
+        git switch feature-login
+                    ↓
+          git fetch origin
+                    ↓
+        git rebase origin/main
+                    ↓
+              Conflict?
+             /         \
+           Yes          No
+            ↓            ↓
+        Fix files      Rebase
+            ↓         successful
+        git add .
+            ↓
+    git rebase --continue
+            ↓
+       Another conflict?
+        /           \
+      Yes            No
+       ↓              ↓
+     Repeat      Rebase complete
+                       ↓
+       git push --force-with-lease
+```
+
+---
+
+# 22. Final Quick Revision
+
+## Git Merge
 
 ```text
 MERGE
@@ -457,6 +1007,22 @@ May create merge commit
 Preserves existing history
 ```
 
+## Merge Conflict
+
+```text
+git merge
+    ↓
+Conflict
+    ↓
+Fix files
+    ↓
+git add .
+    ↓
+git commit
+```
+
+## Git Rebase
+
 ```text
 REBASE
 ↓
@@ -467,18 +1033,14 @@ Usually creates linear history
 Rewrites history
 ```
 
-### Conflict Resolution
-
-**Merge Conflict:**
+## Rebase With Remote Main
 
 ```bash
-git status
-# Fix files
-git add .
-git commit
+git fetch origin
+git rebase origin/main
 ```
 
-**Rebase Conflict:**
+## Rebase Conflict
 
 ```bash
 git status
@@ -487,14 +1049,64 @@ git add .
 git rebase --continue
 ```
 
-### Most Important Points
+## Cancel Rebase
+
+```bash
+git rebase --abort
+```
+
+## Skip Current Commit
+
+```bash
+git rebase --skip
+```
+
+## Push After Rebase
+
+```bash
+git push --force-with-lease origin <branch_name>
+```
+
+---
+
+# 23. Most Important Points
 
 * **Merge → Combine branches**
 * **Merge Conflict → Git cannot automatically combine changes**
 * **Rebase → Replay commits on a new base**
-* **Merge → Preserves commit history**
+* **Merge → Preserves existing commit history**
 * **Rebase → Rewrites commit history**
 * **Rebase → Useful for keeping feature branches updated with `main`**
-* **`--continue` → Continue**
-* **`--abort` → Cancel**
-* **`--skip` → Skip current commit**
+* **`git fetch origin` → Gets the latest remote information**
+* **`origin/main` → Remote `main` branch**
+* **`git rebase origin/main` → Replays feature commits on the latest fetched remote `main`**
+* **`--continue` → Continue after resolving a conflict**
+* **`--abort` → Cancel the rebase**
+* **`--skip` → Skip the current commit**
+* **After rebasing a previously pushed branch → `git push --force-with-lease` may be required**
+
+## Final Memory Trick
+
+```text
+MERGE
+→ JOIN
+
+REBASE
+→ REPLAY
+
+FETCH
+→ GET LATEST REMOTE INFORMATION
+
+CONTINUE
+→ KEEP GOING
+
+ABORT
+→ CANCEL
+
+SKIP
+→ SKIP CURRENT COMMIT
+
+FORCE-WITH-LEASE
+→ SAFELY UPDATE REWRITTEN REMOTE HISTORY
+```
+
