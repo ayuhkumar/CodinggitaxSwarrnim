@@ -1,24 +1,24 @@
-## 19 September (Saturday) (Swarrnim)
+## 27 September (Saturday) (Swarrnim)
 
 | Time        | CG LAB 1                        
 | ----------- | ---------------------
-| 9:30–11:00  | Github(Nikhil Sir)    |
+| 9:30–11:00  | Javascript(Nikhil Sir)    |
 | 11:00–1:00 | Python (Sumit Sir)     |
 | 1:00–2:00  | Break                 | 
 | 2:00–4:00   | HTML(Sumit Sir)      |
 
-## 18 September (Friday) (Swarrnim)
+## 26 September (Friday) (Swarrnim)
 
 | Time        | CG LAB 1                        
 | ----------- | ---------------------
-| 9:30–11:00  | Github(Nikhil Sir)    |
+| 9:30–11:00  | javascript(Nikhil Sir)    |
 | 11:00–1:00 | Python (Sumit Sir)     |
 | 1:00–2:00  | Break                 | 
 | 2:00–4:00   | HTML(Sumit Sir)      |
 | 4:00–4:30   | Break    |
 | 4:30–6:00   | Industry Readiness    |
 
-## 17 September (Thursday) (Swarrnim)
+## 24 September (Thursday) (Swarrnim)
 
 | Time        | CG LAB 1                        
 | ----------- | ---------------------
@@ -30,11 +30,11 @@
 | 4:30–6:00   | Industry Readiness    | 
 
 
-## 16 September (Wednesday) (Swarrnim)
+## 23 September (Wednesday) (Swarrnim)
 
 | Time        | CG LAB 1                        
 | ----------- | ---------------------
-| 9:30–11:00  | Github(Nikhil Sir)    |
+| 9:30–11:00  | javascript(Nikhil Sir)    |
 | 11:00–1:00 | Python (Sumit Sir)     |
 | 1:00–2:00  | Break                 | 
 | 2:00–4:00   | HTML(Sumit Sir)      |
@@ -44,11 +44,11 @@
 
 
 
-## 15 September (Tuesday) (Swarrnim)
+## 22 September (Tuesday) (Swarrnim)
 
 | Time        | CG LAB 1                        
 | ----------- | ---------------------
-| 9:30–11:00  | Github(Nikhil Sir)    |
+| 9:30–11:00  | javascript    |
 | 11:00–1:00 | Python (Sumit Sir)     |
 | 1:00–2:00  | Break                 | 
 | 2:00–4:00   | HTML(Sumit Sir)      |
