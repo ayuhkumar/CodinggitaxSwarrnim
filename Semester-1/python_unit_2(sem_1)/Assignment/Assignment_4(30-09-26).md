@@ -1745,3 +1745,177 @@ After completing all questions, choose **any 3 problems** from Q58–Q68 and imp
 - Short comments explaining the main decision-making logic
 
 This challenge is optional but recommended for practice.
+
+
+---
+
+# Topic-10 — Output Prediction & Execution Flow
+
+> **Important:** For the following questions, do not run the code first. Predict the output by carefully tracing which condition becomes true.
+
+## Q71. Condition Order
+
+Predict the output:
+
+```python
+marks = 85
+
+if marks >= 40:
+    print("Pass")
+elif marks >= 75:
+    print("Very Good")
+else:
+    print("Fail")
+```
+
+### Test Case
+
+`85 → ?`
+
+Then explain why the program does not print `Very Good`.
+
+---
+
+## Q72. Correct the Condition Order
+
+The following program is intended to classify marks:
+
+```python
+marks = 85
+
+if marks >= 90:
+    print("A")
+elif marks >= 75:
+    print("B")
+elif marks >= 40:
+    print("Pass")
+else:
+    print("Fail")
+```
+
+Predict the output.
+
+Then explain why changing the order of the conditions can change the result.
+
+### Test Cases
+
+`95 → ?`  
+`85 → ?`  
+`50 → ?`  
+`30 → ?`
+
+---
+
+## Q73. Nested `if` Execution Flow
+
+Predict the output:
+
+```python
+age = 20
+has_id = True
+
+if age >= 18:
+    if has_id:
+        print("Entry Allowed")
+    else:
+        print("ID Required")
+else:
+    print("Underage")
+```
+
+### Test Case
+
+`age = 20, has_id = True → ?`
+
+Now predict the output if:
+
+```text
+age = 20
+has_id = False
+```
+
+and:
+
+```text
+age = 16
+has_id = True
+```
+
+---
+
+## Q74. `match-case` and Default Case
+
+Predict the output:
+
+```python
+choice = 5
+
+match choice:
+    case 1:
+        print("Add")
+    case 2:
+        print("View")
+    case 3:
+        print("Delete")
+    case _:
+        print("Invalid Choice")
+```
+
+### Test Cases
+
+`1 → ?`  
+`3 → ?`  
+`5 → ?`
+
+Explain the purpose of `case _`.
+
+---
+
+## Q75. Final Execution Challenge
+
+Predict the output without running the program:
+
+```python
+marks = 82
+attendance = 80
+
+if attendance >= 75:
+    if marks >= 90:
+        print("Grade A")
+    elif marks >= 75:
+        print("Grade B")
+    elif marks >= 40:
+        print("Pass")
+    else:
+        print("Fail")
+else:
+    print("Not Eligible")
+```
+
+### Test Cases
+
+`82 80 → ?`  
+`92 80 → ?`  
+`55 80 → ?`  
+`92 60 → ?`
+
+After predicting the output, write in one sentence which condition is checked first and why.
+
+---
+
+# Updated Assignment Structure
+
+The assignment now contains **75 questions**.
+
+The final progression is:
+
+- **Q1–Q8:** Basic `if`
+- **Q9–Q18:** `if-else`
+- **Q19–Q28:** `if-elif-else`
+- **Q29–Q35:** Logical conditions
+- **Q36–Q43:** Nested `if`
+- **Q44–Q49:** Nested `if-elif-else`
+- **Q50–Q57:** `match-case`
+- **Q58–Q68:** Integrated real-life problems
+- **Q69–Q70:** Debugging
+- **Q71–Q75:** Output prediction & execution flow
